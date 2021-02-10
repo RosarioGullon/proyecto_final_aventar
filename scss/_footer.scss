@@ -1,0 +1,89 @@
+
+.footer {
+  text-align: center;
+  font-family: $fuentePrimaria;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+
+
+   	.footer__sociales{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 20px 20px;
+
+		a {
+			font-size: 30px;
+			color: #656060;
+			transition: all .5s ease;
+		}
+
+		.facebook:hover, .instagram:hover, .whatsapp:hover, .compartir:hover{
+			transform: scale(1.3,1.3);
+			color: $colorTerciario;
+			}		
+
+
+	}
+
+		.whatsapp, .instagram, .facebook, .compartir{
+			margin: 20px 20px;
+	}
+
+}
+
+
+.footer__sitemap > a {
+
+  font-size: 0.8rem;
+  color: $colorPrimario; 
+
+  	&:hover {
+    color: #FFFFFF; 
+	}
+
+}
+
+
+.footer__sitemap li  {
+  	list-style-type: none;
+
+  	a {
+		color: #838383;
+		font-size: 10px;
+
+	  	&:hover {
+	       color: #FAFAFA; 
+		}
+
+	}
+
+}
+
+
+
+.footer__contactanos{
+	font-size: 20px;
+	padding: 10px;
+	color: $colorTerciario;
+	letter-spacing: 5px;
+}
+
+.footer__derechos{
+	font-size: 10px;
+	color: #817F7F;
+	text-align: center;
+
+	a {
+	font-size: 15px;
+	color: #838383;
+
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+
+
+

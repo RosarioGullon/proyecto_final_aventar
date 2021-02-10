@@ -1,0 +1,378 @@
+
+$fuentePrimaria:"Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$fuenteSecundaria: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$colorPrimario: #ba9a69ec;
+
+$colorSecundario: #212529;
+
+$colorTerciario: #946D10;
+
+.tipografia{
+    font-family: $fuentePrimaria;
+    margin-bottom: 20px;
+}
+
+
+/*preguntas frecuentes*/
+
+.preguntas {
+  max-width: 1100px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 90px 0;
+  padding: 30px;
+  background-color: #ba9a69ec;
+  border-radius: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  font-weight: lighter;
+}
+
+@media screen and (min-width:200px) and (max-width:1200px){
+  .preguntas {
+    padding: 10px;
+    border: 20px;
+    margin-left: 0px;
+    margin-right: 40px;
+    overflow: hidden;
+  
+    
+  }
+}
+
+@mixin sizes($fuente,$color,$margen){
+  font-family: $fuente;
+  color: $color;
+  margin-bottom: $margen;
+}
+
+
+.preguntas__titulo {
+  @include sizes("montserrat", #7B5D0B, 0px);
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  cursor: pointer;
+
+}
+
+@media screen and (min-width:495px) and (max-width:1200px){
+  .preguntas__titulo {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+  
+    
+  }
+}
+
+@media screen and (min-width:200px) and (max-width:495px){
+  .preguntas__titulo {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+  
+    
+  }
+}
+
+
+
+.preguntas__texto{
+ max-height: 800px;
+  margin-top: 14px;
+  color: #DBE5E9;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: translate(0, 0);
+  z-index: 2;
+  font-family: $fuentePrimaria;
+  
+}
+
+@media screen and (min-width:200px) and (max-width:1200px){
+  .preguntas__texto {
+    font-size: 12px;
+    
+
+  }
+}
+
+
+.ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li{
+    position: relative;
+    padding: 0;
+    margin-top: 0;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    border-top: 1px dotted #DBE5E9;
+  }
+ 
+}
+
+
+ul li:nth-of-type(1){
+  animation-delay: 0.8s;
+}
+
+ul li:nth-of-type(2){
+  animation-delay: 0.75s;
+}
+
+ul li:nth-of-type(3){
+  animation-delay: 1s;
+}
+
+ul li:nth-of-type{
+  padding-bottom: 0;
+}
+
+ul li i{
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      background: #7B5D0B;
+      width: 3px;
+      height: 9px;
+    }
+
+    &:before{
+      transform: translate(-2px, 0) rotate(45deg);
+    }
+
+
+    &:after{
+     transform: translate(2px, 0) rotate(-45deg);
+    }
+}
+
+
+.preguntas__texto,
+ul li i:before,
+ul li i:after{
+  transition: all 0.25s ease-in-out;
+}
+
+
+ul li input[type=checkbox]{
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+
+    &:checked ~ .preguntas__texto{
+      margin-top: 0;
+      max-height: 0;
+      opacity: 0;
+      transform: translate(0, 50%);
+    }
+
+    &:checked ~ i:before {
+      transform: translate(2px, 0) rotate(45deg);
+    }
+
+    &:checked ~ i:after{
+      transform: translate(-2px, 0) rotate(-45deg);
+    }
+}
+
+
+/*preguntas frecuentes*/
+
+
+
+/* secccion aventureros*/
+
+.aventureros__fondo{
+ background-color: #F1F1F1;
+ width: 100%;
+ height: 100%;
+padding: 30px;
+}
+
+#aventureros .aventureros__galeria {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  .aventureros__galeria__contenido {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
+
+      .aventureros__galeria__hover {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(206, 154, 64, 0.9);
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity ease-in-out 0.40s;
+      font-size: 5px;
+
+
+
+          .aventureros__galeria__comentario {
+          
+          color: #fff;
+          font-family: $fuentePrimaria;
+          text-align: center;
+      
+
+
+          p{
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 12px;
+            margin-left: 12px;
+            font-size: 12px;
+            font-style: italic;
+
+            
+          }
+        }
+      }
+
+      &:hover .aventureros__galeria__hover {
+        opacity: 0.9;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+
+
+      
+      }
+
+  }
+
+
+  .aventureros__galeria__encabezado {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 80px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+ 
+
+    .aventureros__galeria__encabezado__titulo {
+      font-size: 1.5rem;
+      font-family: $fuentePrimaria;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .aventureros__galeria__encabezado__subtitulo {
+      font-style: italic;
+      font-family: $fuenteSecundaria;
+   }
+
+  }
+
+}
+
+
+@media screen and (min-width:576px) and (max-width:767px){
+  .aventureros__galeria__encabezado__subtitulo {
+    font-size: 12px;
+  }
+}
+
+
+.aventureros__borde{
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.aventureros__subtitulo{
+  margin-bottom: 40px;
+  font-style: italic;
+  font-size: 20px;
+  font-family: $fuenteSecundaria;
+  text-align: center;
+}
+
+@media screen and (min-width:200px) and (max-width:500px){
+  .aventureros__subtitulo {
+    font-size: 14px;
+  }
+}
+
+/*aventureros*/
+
+
+
+.titulosPrincipales{
+  
+  text-transform:uppercase;
+  color: #585361;
+  font-family: $fuentePrimaria;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width:450px) and (max-width:750px){
+  .titulosPrincipales {
+    font-size: 28px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width:200px) and (max-width:450px){
+  .titulosPrincipales {
+    font-size: 24px;
+    margin-top: 50px;
+  }
+}
+
+
+
+.titulosPrincipales--aventureros{
+   @extend .titulosPrincipales;
+   font-weight: bold;
+
+}
+
+.titulosPrincipales--info{
+   @extend .titulosPrincipales;
+   color: #ECECEC;
+   margin-top: 20px;
+
+}
+

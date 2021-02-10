@@ -1,0 +1,52 @@
+
+/*barra de navegacion*/
+
+
+.navbar-nav .nav-item .nav-link {
+  font-family: montserrat;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.0625em;
+
+ 
+  }
+
+
+ .navbar-nav .nav-item .nav-link.active, .navbar-nav .nav-item .nav-link:hover {
+  color: #F7C86E;
+  }
+
+
+.translate{
+  transition: transform 0.4s;
+
+  &:hover{
+    transform: translateY(-8px);
+  }
+
+}
+
+.bg-inverse{
+    background-color: $colorSecundario;
+  }
+
+
+@media screen and (min-width:200px) and (max-width:991px){
+  #menu {
+    background-color: #212529;
+    opacity: 0.9;
+  
+  }
+
+}
+
+
+
+/*termina la barra de navegacion*/
+
+
+
+
+
+
+

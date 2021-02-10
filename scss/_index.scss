@@ -1,0 +1,171 @@
+
+
+/*comienza presentacion texto*/
+
+.containerIndex{
+  padding: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media screen and (min-width:300px) and (max-width:1300px){
+  .containerIndex {
+    margin-left: 10px;
+  margin-right: 10px;
+    
+  }
+}
+
+.containerIndex__presentacion{
+  color: #9B9893;
+  font-family: $fuentePrimaria;
+  font-size: 24px;
+  text-align: center;
+ padding: 40px;
+
+}
+ 
+@media screen and (min-width:400px) and (max-width:1000px){
+  .containerIndex__presentacion {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+  
+
+@media screen and (min-width:200px) and (max-width:400px){
+  .containerIndex__presentacion {
+    font-size: 12px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+
+/*servicios*/
+
+.containerIndex__items{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 120px;
+  background-color: #E8E6E6;
+  border-radius: 18px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+  padding: 40px;
+
+  li {
+    text-align: center;
+
+    h2 {
+      font-family: $fuenteSecundaria;
+      color: #484848;
+      font-size: 30px;
+      text-shadow: 0.1em 0.1em 0.2em grey;
+      font-style: italic;
+    }
+
+    p {
+      @extend .tipografia;
+    }
+
+    img{
+     width: 170px;
+    height: 140px;
+    margin: 50px;
+    }
+  }
+}
+
+@media screen and (min-width:620px) and (max-width:1068px){
+   .containerIndex__items{
+    display: block;
+    padding: 20px;
+    margin:60px;
+    
+  }
+}
+
+/*cards*/
+
+.fondoCards{
+  background-image: url(../imagenes/logo/logoContacto.png);
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.fondoCards__card{
+  transition: transform 0.8s;
+   box-shadow: 2px 2px 5px #999;
+    
+    &:hover{
+      transform: scale(0.8);
+    }
+}
+
+
+
+.fondoCards__card p{
+  @extend .tipografia;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media screen and (min-width:576px) and (max-width:874px){
+   .fondoCards__card p{
+    font-size: 10px;
+
+    
+  }
+}
+
+
+/*tab y pestañas*/
+
+#tab .nav-item a{
+  @extend .titulosPrincipales;
+   color: #D9B986;
+  font-size: 20px;
+
+    &:hover{
+      color: #212529;
+    }
+}
+
+
+
+@media screen and (min-width:300px) and (max-width:480px){
+   #tab .nav-item a{
+    font-size: 12px;
+    
+  }
+}
+
+
+#myTabContent h2{
+  @extend .titulosPrincipales;
+  color: $colorPrimario;
+  margin-top: 20px;
+  text-align: left;
+}
+
+@media screen and (min-width:300px) and (max-width:400px){
+  #myTabContent h2 {
+    font-size: 18px;
+    margin-left: 2px;
+    
+  }
+}
+
+.modal-content div{
+  font-family: $fuentePrimaria;
+}

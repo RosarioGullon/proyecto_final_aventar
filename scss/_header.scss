@@ -1,0 +1,104 @@
+
+header.header {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    animation: banner 14s infinite; 
+
+
+    @keyframes banner{
+      0%, 20%{
+      background-image: url(../imagenes/presentacionGif/terrestre2.jpg);
+      }
+
+      30%, 40%{
+      background-image: url(../imagenes/presentacionGif/buceo2.jpg);
+      }
+
+      50%, 60%{
+      background-image: url(../imagenes/presentacionGif/terrestre.jpg);
+      }
+
+      70%, 80%{
+      background-image: url(../imagenes/presentacionGif/buceo.jpg);
+      }
+
+      90%, 100%{
+      background-image: url(../imagenes/presentacionGif/playa.jpg);
+      }
+    }
+
+
+
+    :before {
+      content:'';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.1);
+    }
+
+    .header__subtitulo {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.5rem;
+      margin-bottom: 25px;
+      font-family: $fuenteSecundaria;
+
+    }
+
+    @media screen and (min-width:200px) and (max-width:480px){
+      .header__subtitulo  {
+        font-size: 1rem;
+      
+       }
+    }
+
+    .header__titulo {
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 3.25rem;
+      margin-bottom: 2rem;
+     font-family: $fuentePrimaria;
+    }
+
+    @media screen and (min-width:200px) and (max-width:480px){
+      .header__titulo  {
+        font-size: 2.5rem;
+      
+     }
+   }
+
+}
+
+
+@media (min-width: 768px) {
+
+  header.header {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+    position: relative;
+  
+    .header__subtitulo {
+      font-size: 2.25rem;
+      font-style: italic;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+    }
+    
+    .header__titulo {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

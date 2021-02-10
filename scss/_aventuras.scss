@@ -1,0 +1,307 @@
+.headerPages__aventura {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-image: url(../imagenes/headerPages/aventura.jfif);
+
+
+
+    :before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.1);
+    }
+
+    .headerPages__subtitulo {
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.5rem;
+      margin-bottom: 25px;
+      font-family: $fuenteSecundaria;
+      color: #FFFFFF;
+    }
+
+      @media screen and (min-width:200px) and (max-width:480px){
+      .headerPages__subtitulo  {
+        font-size: 1rem;
+        
+      }
+    }
+
+    .headerPages__titulo {
+      font-size: 3.25rem;
+      font-weight: 700;
+      line-height: 3.25rem;
+      margin-bottom: 2rem;
+      font-family: $fuentePrimaria;
+    }
+
+     @media screen and (min-width:200px) and (max-width:480px){
+      .headerPages__titulo  {
+        font-size: 2.5rem;
+      }
+    }
+
+}
+
+
+
+.aventuras{
+background-color: $colorPrimario;
+border-radius: 12px;
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 20px;
+box-shadow: 2px 2px 5px #999;
+}
+
+.aventuras__contenedor {
+  max-width: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+
+/* --- --- CAROUSEL --- --- */
+
+.carousel__contenedor {
+  position: relative;
+
+}
+
+.carousel__elemento{
+  display: flex;
+}
+
+/*flechas 1,2 y 3*/
+.carousel__anterior1, .carousel__siguiente1, .carousel__anterior2, .carousel__siguiente2,.carousel__anterior3, .carousel__siguiente3 {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 2px;
+  border: none;
+  top: calc(45% - 35px);
+  cursor: pointer; 
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #fff;
+  opacity: 70%;
+
+
+  &:hover{
+    opacity: 100%
+  }
+}
+
+
+.carousel__anterior1, .carousel__anterior2, .carousel__anterior3 {
+  left: -30px;
+}
+
+.carousel__siguiente1, .carousel__siguiente2, .carousel__siguiente3 {
+  right: -30px;
+}
+
+
+.carousel__lista1, .carousel__lista2, .carousel__lista3 {
+  overflow: hidden;
+}
+
+
+/*indicadores 1,2 y 3*/
+
+.carousel__indicadores1 .glider-dot, .carousel__indicadores2 .glider-dot, .carousel__indicadores3 .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  opacity: .2;
+  border-radius: 8px;
+
+  &:hover{ 
+  opacity: .5;
+  }
+
+  &.active {
+  opacity: 1;
+  }
+}
+
+.carousel__lista1, .carousel__lista2, .carousel__lista3  {
+
+    img{
+      height: 300px;
+      width: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+      transition: transform 0.1s;
+      opacity: 0.8;
+    
+        &:hover{
+        opacity: 1;
+        transform: translateY(-15px);
+        }
+
+
+    }
+
+
+    h1{
+
+      font-family: $fuentePrimaria;
+      font-size: 18px;
+      text-align:left;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.2em black;
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 8px;
+
+    }
+
+    p{
+
+      font-family: $fuentePrimaria;
+      display: inline-block;
+      text-shadow: #737070 0.1em 0.1em 0.2em;
+      opacity: 1;
+      color:#E9E9E9;
+      transition: transform 0.1s;
+
+        &:hover{
+          cursor: pointer;
+          color: #fff;
+          transform: translateY(-2px);
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:300px) and (max-width:1400px){
+
+    .carousel__lista1, .carousel__lista2, .carousel__lista3 {
+          p{
+            width: 30%;
+          display: block;
+          
+        }
+    }
+
+}
+
+
+@media screen and (min-width:300px) and (max-width:500px){
+
+      .carousel__anterior1, .carousel__anterior2, .carousel__anterior3 {
+      left: -25px;
+      }
+
+    .carousel__siguiente1, .carousel__siguiente2, .carousel__siguiente3 {
+      right: -25px;
+    }
+
+}
+
+
+
+@media screen and (min-width:449px) and (max-width:1500px){
+
+  .carousel__lista1, .carousel__lista2, .carousel__lista3 {
+        img{
+         width: 95%;
+        height: 65%;
+        
+      }
+  }
+}
+
+
+
+@media screen and (min-width:200px) and (max-width:1200px){
+
+  .carousel__lista1, .carousel__lista2, .carousel__lista3 {
+        h1 {
+        font-size: 14px;
+        
+      }
+  }
+}
+
+
+
+.aventuras__titulo{
+    font-family: $fuentePrimaria;
+    text-align: center;
+    text-shadow: #737070 0.1em 0.1em 0.2em;
+    font-size: 24px;
+    color: #212529;
+    padding: 15px;
+}
+
+
+
+
+.modal__lista{
+  list-style: none;
+  text-align: center;
+}
+
+/*estilos de la galeria*/
+
+.modal__galeria{
+  list-style: none;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+       margin: 12px;
+  }
+
+  img{
+      width: 350px;
+      height: 300px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+      transition: transform 0.8s;
+      border-radius: 12px;
+
+      &:hover{
+       transform: scale(1.5);
+      }
+  }
+  
+}
+
+
+@media screen and (min-width:300px) and (max-width:1100px){
+  .modal__galeria img{
+    width: 250px;
+    height: 200px;
+
+
+    &:hover{
+       transform: none;
+      }
+  }
+}
+
